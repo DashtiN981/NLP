@@ -41,7 +41,7 @@ print(word_freq)
 # 3) ************** Sentence tokenization ***************
 
 sent_tokens = [sent for sent in doc.sents]
-#print(sent_tokens)
+print(sent_tokens)
 
 # provide a score for every single sentence
 
