@@ -33,11 +33,22 @@ model = Word2Vec(new_vec, min_count=1, vector_size=32)
 # 4) Predict the Output
 
 # find 10 closet words in the vector space that we have created
-model.wv.most_similar['man']
+print(model.wv.most_similar('man'))
 
 # see the vector
-model.wv['man']
+
+#print(model.wv['man'])
+vector_of_man = model.wv.get_vector('man')
+
+print(vector_of_man)
 
 # so this is how man is represented in out vector space
 
+#let us try the famous relationship
+vec = model.wv['king'] - model.wv['man'] + model.wv['women']
+print(model.wv.most_similar([vec]))
+
+
+vec = model.wv['Germany'] - model.wv['Berlin'] + model.wv['Paris']
+print(model.wv.most_similar([vec]))
 
