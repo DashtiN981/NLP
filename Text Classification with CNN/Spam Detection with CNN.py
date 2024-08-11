@@ -131,6 +131,10 @@ plt.plot(r.history['val_loss'], label='Validation Loss')
 plt.legend()
 plt.show()
 
-
+# Accuracy per iteration
+plt.plot(r.history['accuracy'], label='Accuracy')
+plt.plot(r.history['val_accuracy'], label='Validation accuracy')
+plt.legend()
+plt.show()
 
 
